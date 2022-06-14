@@ -1,0 +1,24 @@
+
+type person{
+  _id: ID!
+  name: String!
+  telefono: String
+  calle: String!
+  estatura:String
+  image:String
+  
+}
+
+type Query {
+  "Devuelve todos cursos"
+  getPersona1: [person]
+  "Devuelve un curso"
+  getPersona(id: ID!): person
+  
+  getDelete(id: ID!):person
+ 
+}
+
+type Mutation{
+  addPerson(name: String,telefono:String,calle:String,image:String):person
+}
